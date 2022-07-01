@@ -782,10 +782,6 @@ static ssize_t sas_address_show(struct device *dev,
 	return snprintf(buf, PAGE_SIZE, "0x%016llx\n", sas_address);
 }
 
-static inline bool is_disk_or_zbc(const struct hpsa_scsi_dev_t *hdev)
-{
-	return hdev->devtype == TYPE_DISK || hdev->devtype == TYPE_ZBC;
-}
 
 
 static inline bool is_disk_or_zbc(const struct hpsa_scsi_dev_t *hdev)
